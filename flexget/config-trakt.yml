@@ -122,7 +122,7 @@ discover-series:
       password: "123456"
 
  discover-movies:
-    template: movies
+    template: pelis
     quality: 720p+ hdtv+ # Make sure no screeners or cams are downloaded
     discover:
       what:
@@ -134,16 +134,8 @@ discover-series:
             force_subtitles: yes
         - piratebay:
             category: video
-            sort_by: leechers
-            url: https://piratebaymirror.eu
-        - search_rss:
-            url: https://eztv.ag/ezrss.xml
-            all_entries: no
-            ascii: yes
-            escape: yes
-            link:
-              - link
-              - magneturi
+            sort_by: seeds
+        - torrentz: verified
       interval: 1 days
     list_match:
       from:
